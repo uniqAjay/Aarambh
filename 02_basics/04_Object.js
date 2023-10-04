@@ -73,7 +73,7 @@ const favSong = {
 
 const { i_want_Something_just_like_This: justLikeThis} = favSong
 
-console.log(justLikeThis)
+// console.log(justLikeThis)
 
 
 
