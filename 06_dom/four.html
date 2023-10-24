@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome to the real world</title>
+</head>
+
+<body style="background-color: black; color: orange;">
+    <ul class="language">
+        <li>Javascript</li>
+    </ul>
+</body>
+<script>
+
+
+    function addLang(lang) {
+
+        const li = document.createElement('li')
+        console.log(li)
+        li.innerHTML = `${lang}`
+        const newClass = document.querySelector('.language').appendChild(li)
+
+
+    }
+
+    addLang('python')
+    addLang("Ruby")
+
+    //much optimize way
+    function addNewLang(newLang) {
+        const li = document.createElement('li')
+        li.appendChild(document.createTextNode(newLang))
+        document.querySelector('.language').appendChild(li)
+
+    }
+    addNewLang('c++')
+
+    //  edit
+    //Chai or code
+    const secondLanguage = document.querySelector("li:nth-child(2)")
+    // secondLanguage.innerHTML = 'java'
+    const editLang = document.createElement('li')
+    editLang.innerText = "Java"
+    secondLanguage.replaceWith(editLang)
+
+    // 2nd edit
+
+    const secondEdit = document.querySelector("li:first-child")
+    secondEdit.outerHTML = "<li>c#</li>"
+
+    // remove
+
+   const lastChild = document.querySelector("li:last-child")
+   lastChild.remove()
+
+
+</script>
+
+</html>
