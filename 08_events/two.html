@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome to the real word</title>
+</head>
+
+<body>
+
+    <h1>Welcome to the real word</h1>
+    <button id="start">Start</button>
+    <button id="stop">Stop</button>
+
+    <script>
+
+
+        let print;
+
+        document.querySelector('#start').addEventListener('click', function (e) {
+
+         print = setInterval(function () {
+                let date = new Date()
+                console.log('Ajay', date.toLocaleDateString())
+            }, 1000)
+        })
+    
+        document.querySelector('#stop').addEventListener('click', function (e) {
+            clearInterval(print)
+            print = null;
+
+        })
+        
+
+
+
+    </script>
+
+
+
+</body>
+
+</html>
