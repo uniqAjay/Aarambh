@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome To The Real  World</title>
+
+</head>
+<body style="background-color: grey;">
+
+    <script>
+
+        const requestUrl = 'https://api.github.com/users/hiteshchoudhary'
+        const xhr = new XMLHttpRequest()
+        xhr.open('GET', requestUrl)
+        xhr.onreadystatechange = function(){
+        const state = xhr.readyState
+        console.log()
+        
+        if(state === 4)
+        {
+            // console.log(this.responseText)
+            const data =JSON.parse(this.responseText)
+            console.log(data.followers)
+
+            
+        }
+        
+
+        }
+        xhr.send()
+
+
+    </script>
+
+  
+
+    
+</body>
+</html>
