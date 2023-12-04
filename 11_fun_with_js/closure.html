@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=
+    
+    , initial-scale=1.0">
+    <title>welcomeToRealWorld</title>
+</head>
+
+<body>
+    <button id="orange">orange</button>
+    <button id="green">green</button>
+
+    <script>
+
+
+        // function init() {
+
+        // const name = 'Ajay'
+        // function displayName() {
+        //     console.log(name)
+        // }
+
+        // displayName()
+
+        // }
+
+        // init()
+
+
+        function makeFunc() {
+            const name = "Mozilla";
+            function displayName() {
+                console.log(name);
+            }
+            return displayName;
+        }
+
+        const myFunc = makeFunc();
+        myFunc();
+
+    </script>
+    <script>
+
+        // document.getElementById('orange').onclick = function () {
+
+        //     document.body.style.backgroundColor = 'orange'
+        // }
+
+        // document.getElementById('green').onclick = function () {
+
+        //     document.body.style.backgroundColor = 'green'
+        // }
+
+        function handleClick(color) {
+
+            return function () {
+
+                document.body.style.backgroundColor = `${color}`
+            }
+
+        }
+
+        document.getElementById('orange').onclick = handleClick('orange')
+
+        document.getElementById('green').onclick = handleClick('green')
+
+
+    </script>
+</body>
+
+</html>
